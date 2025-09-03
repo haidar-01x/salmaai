@@ -115,8 +115,9 @@
         const errorContainer = document.getElementById('errorContainer');
         const errorMessage = document.getElementById('errorMessage');
 
-        // IMPORTANT: Replace this with your actual API key from Google AI Studio.
-        const API_KEY = "AIzaSyA6i30K9bGlJg-bdgXHq8PW_0tYKUgQMH0";
+        // IMPORTANT: The Canvas environment automatically provides the API key for you.
+        // Leave this line empty.
+        const API_KEY = "";
 
         // This function handles the fetch calls with exponential backoff
         async function fetchWithRetry(url, options, retries = 3, delay = 1000) {
