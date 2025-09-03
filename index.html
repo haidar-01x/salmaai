@@ -115,7 +115,8 @@
         const errorContainer = document.getElementById('errorContainer');
         const errorMessage = document.getElementById('errorMessage');
 
-        const API_KEY = ""; // Do not change
+        // IMPORTANT: Replace this with your actual API key from Google AI Studio.
+        const API_KEY = "AIzaSyA6i30K9bGlJg-bdgXHq8PW_0tYKUgQMH0";
 
         // This function handles the fetch calls with exponential backoff
         async function fetchWithRetry(url, options, retries = 3, delay = 1000) {
@@ -160,6 +161,10 @@
             const prompt = promptInput.value.trim();
             if (!prompt) {
                 showError('Please enter a prompt.');
+                return;
+            }
+            if (!API_KEY) {
+                showError('API Key is missing. Please add your key from Google AI Studio.');
                 return;
             }
             
